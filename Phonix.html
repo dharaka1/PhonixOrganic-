@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonix Organic</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("file:///D:/manpulu-uram--1000x1000.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            margin: 100px auto;
+            max-width: 700px;
+            border-radius: 10px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        #info-box {
+            display: none;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phonix Organic</h1>
+        <p>Welcome to our Product WebPage</p>
+
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="file:///D:/WhatsApp Image 2025-04-21 at 9.05.10 PM.jpeg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="file:///D:/WhatsApp Image 2025-04-21 at 9.01.30 PM.jpeg" alt="Slide 2">
+            </div>
+        </div>
+
+        <button onclick="showInfo()">Contact Details</button>
+
+        <!-- Hidden info box -->
+        <div id="info-box">
+            📞 To order the product, contact: <br>
+            <strong><a href="tel:9940620920" style="color: white; text-decoration: none;">9940620920</a></strong>, 
+            <strong><a href="tel:9940620652" style="color: white; text-decoration: none;">9940620652</a></strong>
+            <br><br>
+            📍 Address: <br>
+            <strong>S. Naraiyur, Vepur Taluk, Cuddalore District - 606301, Tamil Nadu</strong>
+<video width="50%" controls>
+    <source src="file:///C:/Users/welcome/Downloads/videoplayback.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
+        </div>
+    </div>
+
+    <script>
+        function showInfo() {
+            document.getElementById('info-box').style.display = 'block';
+        }
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
